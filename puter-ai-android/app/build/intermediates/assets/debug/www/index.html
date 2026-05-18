@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Puter AI Images</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://js.puter.com/v2/"></script>
+  </head>
+  <body>
+    <div class="app">
+      <div class="top">
+        <div class="title">
+          <h1>Puter AI Images</h1>
+          <div class="subtitle">Generieren &amp; Bearbeiten via Puter.js</div>
+        </div>
+        <div class="actions">
+          <button id="btnSignIn" class="btn primary">Anmelden</button>
+          <button id="btnSignOut" class="btn danger" disabled>Abmelden</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="panel">
+          <div class="row">
+            <div class="field">
+              <div class="label">Modus</div>
+              <div class="tabs">
+                <button id="tabGenerate" class="tab active" type="button">Generieren</button>
+                <button id="tabEdit" class="tab" type="button">Bearbeiten</button>
+              </div>
+            </div>
+            <div class="field">
+              <div class="label">Status</div>
+              <div id="status" class="status">Initialisiere…</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="row">
+            <div class="field">
+              <div class="label">Provider</div>
+              <select id="selProvider" disabled></select>
+            </div>
+            <div class="field">
+              <div class="label">Modell</div>
+              <select id="selModel" disabled></select>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 12px">
+            <div class="field">
+              <div class="label">Qualität (optional)</div>
+              <select id="selQuality" disabled>
+                <option value="">Auto</option>
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+                <option value="standard">standard</option>
+                <option value="hd">hd</option>
+              </select>
+            </div>
+            <div class="field">
+              <div class="label">Eingabebild (Bearbeiten)</div>
+              <input id="fileInput" type="file" accept="image/*" class="hide" />
+              <div id="inputHint" class="muted">Wähle oben „Bearbeiten“, um ein Bild hochzuladen.</div>
+            </div>
+          </div>
+
+          <div class="field" style="margin-top: 12px">
+            <div class="label">Prompt</div>
+            <textarea id="txtPrompt" placeholder="z.B. 'Mache das Bild im Stil von ...' oder 'Ersetze den Himmel durch ...'"></textarea>
+          </div>
+
+          <div style="display:flex; gap:10px; margin-top: 12px; flex-wrap: wrap;">
+            <button id="btnRun" class="btn good" disabled>Ausführen</button>
+            <button id="btnResetInput" class="btn" disabled>Input löschen</button>
+          </div>
+        </div>
+
+        <div class="panel output">
+          <div class="imgbox" id="imgBox">
+            <div class="muted" id="imgPlaceholder">Noch kein Ergebnis.</div>
+          </div>
+          <div class="out-actions">
+            <button id="btnDownload" class="btn primary" disabled>Download</button>
+            <button id="btnUseAsInput" class="btn" disabled>Als Input nutzen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

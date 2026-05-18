@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.puter.aiimage.app-mergeDebugResources-27:/values-v22/values-v22.xml",
+            "map": [
+                {
+                    "source": "/root/.gradle/caches/8.14.4/transforms/d1637fd6735fe8072893fdf8aef00ea7/transformed/appcompat-1.6.1/res/values-v22/values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,487",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,482,764"
+                    }
+                }
+            ]
+        }
+    ]
+}
